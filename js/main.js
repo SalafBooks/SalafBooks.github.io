@@ -79,17 +79,3 @@ function w3RemoveClass(element, name) {
     // element.className = arr1.join(" ");
     element.style.display = "none";
 }
-
-let btnContainer = document.getElementById("myBtnContainer");
-let btns = btnContainer.getElementsByClassName("btn");
-
-filterSelection("all");
-for (let i = 0; i < btns.length; i++) {
-    let btn = btns[i];
-
-    btn.addEventListener("click", function() {
-        let current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += " active";
-    });
-}
