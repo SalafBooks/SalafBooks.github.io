@@ -5,3 +5,34 @@
 */
 // This file is intentionally blank
 // Use this file to add JavaScript to your project
+function myFunction(){
+    let input = document.getElementById("myInput");
+    let filter = input.value.toLowerCase();
+
+    let itemlists = document.getElementsByTagName("div");
+    let div = document.getElementById("items");
+
+    for (let i = 0; i < itemlists.length; i++){
+        let item = itemlists[i];
+        let id = item.getAttribute("data-value");
+        let h5 = item.getElementsByTagName("h5");
+
+        if (h5.length > 0){
+            h5 = h5[0];
+            if (id != null || id){
+                if (id == filter || h5.innerHTML.toLowerCase().includes(filter)){
+                    itemlists[i].style.display = "";
+                }
+                else{
+                    itemlists[i].style.display = "none";
+                }
+            }else{
+                itemlists[i].style.display = "";
+            }
+        }else{
+            itemlists[i].style.display = "";
+        }
+    }
+
+    console.log(filter);
+}
