@@ -10875,3 +10875,24 @@ textarea.form-control-lg {
   background-color: #666;
   color: white;
 }
+
+#scholarLists {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#scholarLists td, #scholarLists th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#scholarLists tr:nth-child(even) {background-color: #f2f2f2;}
+#scholarLists tr:hover {background-color: #ddd;}
+#scholarLists th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
