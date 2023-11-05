@@ -13,7 +13,7 @@ function myFunction(){
             h5 = h5[0];
             h9 = h9[0];
             if (id != null || id){
-                if (id == filter || h5.innerHTML.toLowerCase().includes(filter) || h9.innerHTML.toLowerCase().includes(filter)){
+                if (id.includes(filter) || h5.innerHTML.toLowerCase().includes(filter) || h9.innerHTML.toLowerCase().includes(filter)){
                     itemlists[i].style.display = "";
                 }
                 else{
@@ -48,7 +48,7 @@ function filterSelection(filter){
 
         w3RemoveClass(item, "show");
 
-        if (id == filter || filter == "") w3AddClass(item, "show");
+        if (id == filter || filter == "" || id.includes(filter)) w3AddClass(item, "show");
     }
 }
 
